@@ -1,0 +1,45 @@
+.pull-right{
+    float: right;
+    border-left: 1px solid rgba(0,0,0,.12);
+}
+.page-header{
+    border: 1px solid rgba(0,0,0,.12);
+    min-height: 25px;
+    padding-right: 1px;
+}
+
+:host /deep/ .mat-toolbar .mat-toolbar-row{
+    height: 40px !important;
+    min-height: 23px;
+    display: inherit !important;
+}
+
+.page-header span {
+    line-height: 42px;
+}
+
+.grid-container {
+    overflow: auto;
+}
+.adf-document-list-loading-margin {
+    margin: 30px 45%;
+}
+.header{
+    font-size: 18px;
+    font-family: Muli;
+}
+:host /deep/ .mdl-paging {
+  height: 40px !important;
+}
+
+:host /deep/ .adf-data-table th  {
+  height: 40px !important;
+}
+:host /deep/ .adf-data-table tr  {
+  height: 40px !important;
+}
+
+:host /deep/ .adf-data-table td  {
+  height: 40px !important;
+}
+

@@ -1,0 +1,140 @@
+@import '../../../styles/theming';
+
+.setting-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+}
+
+.settings {
+    border-radius: 8px;
+    position: absolute;
+    background-color: papayawhip;
+    color: cadetblue;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+}
+
+.banned {
+    width: 130px;
+    margin: 10px;
+}
+
+.toggle {
+    width: 120px;
+    margin: 20px;
+}
+
+@media (min-width: 721px) {
+    .mobile-settings {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .settings {
+        display: none;
+    }
+}
+
+:host /deep/ .adf-login-content {
+    background-image: url('../../../assets/accounting-background.jpg') !important;
+}
+
+:host /deep/ .adf-alfresco-logo img {
+    display: none !important;
+}
+
+:host /deep/ .adf-alfresco-logo:after {
+    content: 'Richter LOE Process';
+    color: mat-color($primary);   
+}
+
+:host /deep/ .adf-alfresco-logo {
+    font-size: 22px;
+    text-align: center;
+}
+
+
+:host /deep/ .mat-raised-button.mat-primary {
+    background-color: mat-color($accent);
+}
+
+:host /deep/  .mat-checkbox-checked.mat-primary .mat-checkbox-background {
+    background-color: mat-color($accent);
+}
+
+:host /deep/ .mat-input-underline .mat-input-ripple {
+  background-color: mat-color($primary);
+}
+
+:host /deep/ .adf-login-card-wide {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    width: 330px !important;
+    // height: 440px !important;
+}
+
+:host /deep/ .adf-alfresco-logo{
+    line-height: normal !important;
+    padding: 16px 16px 16px 16px !important;
+    align-items: center !important;
+    display: block !important;
+    justify-content: stretch !important;
+    transform-origin: 165px 56px !important;
+    box-sizing: border-box !important;
+    margin-top: 5px !important;    
+}
+:host /deep/  .adf-login__field{
+    font-size: 1rem !important;
+    line-height: 18px !important;
+    overflow: hidden !important;
+    width: 90% !important;
+    padding-top: 18px !important;
+}
+
+:host /deep/ .adf-login-button{
+    width: 90% !important;
+    overflow: hidden !important;
+    margin-left: 18px !important;
+    margin-right: 18px !important;
+}
+
+:host /deep/ .adf-login__remember-me {
+    margin-left: 18px !important;
+    margin-right: 18px !important;
+}
+:host /deep/ .adf-login-action-container{
+    font-size: 14px !important;
+    line-height: normal !important;
+    width: 100% !important;
+    height: 70px;
+    background-color: transparent !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+}
+
+:host /deep/ .adf-login-action {
+    margin: 20px !important;
+    margin-bottom: 50px !important;
+}
+
+:host /deep/ .adf-login-card-wide {
+    min-width: 330px !important;
+}
+
+:host /deep/ .error {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+}
+:host /deep/ .copyright {
+    display: none;
+}
+
+:host /deep/ .adf-login-content {
+    background-image: url('accounting-background.jpg') !important;
+}

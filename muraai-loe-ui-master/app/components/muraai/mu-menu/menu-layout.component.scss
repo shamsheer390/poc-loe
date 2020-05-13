@@ -1,0 +1,171 @@
+@import 'styles/theming';
+
+.alf-create-menu-container {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.alf-create-menu-container > button {
+  width: 272px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: mat-color($accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.alf-task-menu-container {
+  float: left;
+  border-bottom: 1px solid #eee;
+}
+.alf-admin-menu-container {
+  float: left;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.alf-menu-head-container {
+  float: left;
+  width: 100%;
+}
+
+.alf-menu-header {
+  float: left;
+  cursor: pointer;
+  opacity: 0.54;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  width: 100%;
+}
+
+.alf-menu-header:hover {
+  color: mat-color($accent);
+}
+
+.alf-menu-header .alf-menu-icon {
+  float: left;
+  padding: 10px 10px 0 0;
+}
+
+.alf-menu-header .alf-menu-icon > i {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.alf-menu-header .alf-menu-text {
+  float: left;
+  padding: 23.5px 0px;
+  width: calc(100% - 88px);
+}
+
+.alf-menu-header .alf-menu-toggle {
+  float: left;
+}
+
+.alf-menu-header .alf-menu-toggle > i {
+  padding: 20px 0px;
+}
+
+.alf-menu-sublist {
+  float: left;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.54;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.alf-menu-sublist .alf-menu-text:hover {
+  color: mat-color($accent);
+}
+
+.alf-menu-sublist .alf-menu-text {
+  float: left;
+  width: calc(100% - 74px);
+  padding: 12px 10px;
+  padding-left: 64px;
+  cursor: pointer;
+}
+
+.alf-create-button > i {
+  float: right;
+  padding: 7px 0px;
+}
+
+.alf-selected-menu {
+  color: mat-color($accent);
+}
+
+.alf-button-width {
+  width: 272px;
+}
+
+.box {
+  width: 280px;
+  height: 50px;
+}
+
+.container-1 {
+  width: 280px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+.container-1 input#search {
+  margin-top: 10px;
+  width: 262px;
+  height: 40px;
+  background: transparent;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: 25px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid;
+  border-color: rgba(32, 32, 32, 0.13);
+  text-indent: 1em;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+  border-color: mat-color($primary);
+}
+
+.container-1 input#search::-moz-placeholder { /* Firefox 18- */
+  border-color: mat-color($primary);
+}
+
+.container-1 input#search::-moz-placeholder { /* Firefox 19+ */
+  border-color: mat-color($primary);
+}
+
+
+.container-1 input#search:focus {
+  outline: none;
+  border-color: mat-color($primary);
+}
+
+.alf-task-menu-container {
+  width: 307px;
+  border: none;
+  margin-right: 0px;
+}
+
+.selectedmenu {
+  color: mat-color($accent) !important;
+}

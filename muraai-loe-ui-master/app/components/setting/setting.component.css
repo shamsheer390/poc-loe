@@ -1,0 +1,71 @@
+.setting-card {
+    width: 350px;
+    height: 332px;
+    padding: 0px;
+    margin-left: calc((100% - 350px) / 2);
+    margin-right: calc((100% - 350px) / 2);
+}
+
+.md-card-top-cover {
+    background: bottom right 15% no-repeat #1fbcd2;
+    height: 171px;
+}
+
+.setting-card md-card-title {
+    color: #fff;
+    padding-top: 135px;
+    padding-left: 16px;
+}
+
+.setting-container {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.icon-margin {
+    margin-right: 9px;
+}
+
+.setting-container>div {
+    display: table-row;
+}
+
+md-card-subtitle {
+    color: rgba(0,0,0,.54);
+    font-size: 1rem;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 16px 24px;
+    width: calc(100% - 48px);
+    margin-bottom: 0px;
+}
+
+.input-container {
+    width: calc(100% - 48px);
+    padding: 0px 24px;
+}
+
+md-input-container {
+    width: calc(100% - 32px);
+    margin-left: 8px;
+    font-size: 16px;
+    font-family: Muli;
+}
+
+.link-icon {
+    float: left;
+    margin-top: 12px;
+}
+
+md-card-actions {
+    margin: 0px;
+    border-top: 1px solid #eee;
+    text-align: right;
+    padding: 8px 24px;
+}
+
+.back-button {
+    color: rgb(255,152,0);
+}

@@ -1,0 +1,24 @@
+.is-upgraded>label {
+    font-size: 14px;
+    top: 4px;
+    visibility: visible;
+    font-weight: bold;
+    opacity: 0.54;
+    color: #000;
+}
+
+.mdl-textfield.is-focused .mdl-textfield__label {
+    color: #ff9100 !important;
+}
+
+.mdl-textfield.is-dirty .mdl-textfield__label, .mdl-textfield.has-placeholder .mdl-textfield__label {
+    font-size: 14px;
+    color: #000;
+    visibility: visible !important;
+    font-weight: bold;
+    opacity: 0.54;
+}
+
+.mdl-textfield--floating-label {
+    width: 100%;
+}

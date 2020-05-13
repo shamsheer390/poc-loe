@@ -1,0 +1,13 @@
+<div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col" style="padding: 10px 20px; text-align: center;">
+  <button class = "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" *ngFor="let button of buttonList" (click)="onActionButtonClick(button.status)">{{ button.label }}</button>
+  <button class = "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="onPopUp()" *ngIf="signButtonShow">Sign </button>
+</div>
+<dialog class="mdl-dialog mdl-cell--4-col alf-alert-box"  #alertbox>
+	<div class="alf-alert-message-header">Notification</div>
+	<div class='alf-alert-message-text'>
+		 {{taskStatus}}
+	</div>
+	<div class="alf-association-action-container alf-center-align">
+		<button class='alf-tbl-button mdl-shadow--2dp' (click)="onOKClick()">OK</button>
+	</div>
+</dialog>

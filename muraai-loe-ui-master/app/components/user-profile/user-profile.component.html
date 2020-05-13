@@ -1,0 +1,11 @@
+<div>
+    <div class="alf-profile-container">
+        <span *ngIf="firstName && lastName" class="alf-profile-name">{{firstName + ' '+ lastName}} </span>
+      <img [src]="imgSrc" alt="MV" id="alf-profile-pic" class="mdl-button mdl-js-button mdl-button--icon" md-button [mdMenuTriggerFor]="menu"/>
+      <md-menu #menu="mdMenu">
+        <button md-menu-item (click)="menuClick('sign_out')">Sign Out</button>
+        <button md-menu-item (click)="menuClick('profile_settings')">Profile Settings</button>
+      </md-menu>
+    </div>
+
+</div>

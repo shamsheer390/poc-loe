@@ -1,0 +1,11 @@
+{
+  "TITLE": "Bienvenue",
+  "LABELS": {
+    "FIRST_NAME": "Prénom",
+    "LAST_NAME": "Nom de famille",
+    "EMAIL": "Email",
+    "ADDRESS": "Adresse",
+    "SERVICE_TYPE": "Service Type",
+    "INDUSTRY_TYPE": "type de service"
+  }
+}

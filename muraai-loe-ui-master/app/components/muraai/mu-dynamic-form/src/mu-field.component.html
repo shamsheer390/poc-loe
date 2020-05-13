@@ -1,0 +1,35 @@
+<div [formGroup]="form" [ngSwitch]="data.controlType">
+        <div *ngSwitchCase="'textbox'">     
+            <md-input-container class="md-textfield" [style.display]="data.visibility ? 'block' : 'none'">
+                <label [attr.for]="data.name">{{data.label}}</label>                    
+                <input mdInput  [formControlName]="data.name" [id]="data.id" [type]="data.type" [value]="data.value"  (change)="onValueChange($event, data.id)">
+            </md-input-container>
+        </div>
+        <div *ngSwitchCase="'selectbox'">
+            <div class="md-textfield" [style.display]="data.visibility ? 'block' : 'none'">
+                <label [attr.for]="data.name">{{data.label}}</label>
+                <br>         
+                <md-select [id]="data.name" [formControlName]="data.name" [(ngModel)]="data.value" (change)="onSelectBoxChange($event, data.id)">
+                    <md-option *ngFor="let opt of data.options" [value]="opt.value">
+                        {{opt.key}}
+                    </md-option>
+                </md-select>
+            </div>
+        </div>
+        <div *ngSwitchCase="'datepicker'">
+                <md-input-container class="md-textfield" [style.display]="data.visibility ? 'block' : 'none'">
+                    <label [attr.for]="data.name">{{data.label}}</label>
+                    <input mdInput [mdDatepicker]="fromdate" [id]="data.id" [formControlName]="data.name" [value]="data.value" (change)="onValueChange($event, data.id)">
+                    <button mdSuffix [mdDatepickerToggle]="fromdate"></button>
+                </md-input-container>
+                <md-datepicker #fromdate></md-datepicker>
+        </div>
+        <div *ngSwitchCase="'textarea'">
+            <md-input-container class="md-textfield" [style.display]="data.visibility ? 'block' : 'none'">
+                <label [attr.for]="data.name">{{data.label}}</label>                            
+                <textarea mdInput
+                mdTextareaAutosize [id]="data.id" [formControlName]="data.name" (change)="onValueChange($event, data.id)"></textarea>
+            </md-input-container>
+        </div>    
+</div>
+      

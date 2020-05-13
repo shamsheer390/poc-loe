@@ -1,0 +1,9 @@
+<div class="alf-breadcrumb-container">
+  <div class="alf-crumb-container" *ngFor="let crumb of crumbs; let l = last;">
+    <div (click)="moveToCrumb(crumb, l)" *ngIf="crumb.show">{{crumb.name}}</div>
+    <i *ngIf="!l && crumb.show" class="material-icons">chevron_right</i>
+  </div>
+</div>
+<div class="alf-icon-container">
+  <i class="material-icons"  md-tooltip="{{'MURAAI_BREADCRUMB.BUTTON_LABEL.REFRESH'  | translate}}" mdTooltipPosition="below" (click)="onRefreshClick()">refresh</i>
+</div>

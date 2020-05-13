@@ -1,0 +1,31 @@
+{
+  "TITLE": "Welcome",
+  "LABELS": {
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "EMAIL": "E mail",
+    "ADDRESS": "Address",
+    "SERVICE_TYPE": "Service Type",
+    "INDUSTRY_TYPE": "Industry Type"
+  },
+  "DOCUMENT_LIST": {
+    "COLUMNS": {
+      "DISPLAY_NAME": "Display name",
+      "CREATED_BY": "Created by",
+      "CREATED_ON": "Created on"
+    },
+    "ACTIONS": {
+      "FOLDER": {
+        "SYSTEM_1": "System folder action 1",
+        "CUSTOM": "Custom folder action",
+        "DELETE": "Delete"
+      },
+      "DOCUMENT": {
+        "DOWNLOAD": "Download",
+        "DELETE": "Delete",
+        "SYSTEM_2": "System document action 2",
+        "CUSTOM": "Custom action"
+      }
+    }
+  }
+}

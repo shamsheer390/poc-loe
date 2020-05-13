@@ -1,0 +1,144 @@
+@import '~@angular/material/theming';
+
+$muraai-primary: (
+    50: #e0f7fa,
+    100: #b2ebf2,
+    200: #80deea,
+    300: #4dd0e1,
+    400: #26c6da,
+    500: #00bcd4,
+    600: #00acc1,
+    700: #0097a7,
+    800: #00838f,
+    900: #006064,
+    A100: #84ffff,
+    A200: #18ffff,
+    A400: #00e5ff,
+    A700: #00b8d4,
+
+    contrast: (
+        50: $white-87-opacity,
+        100: $white-87-opacity,
+        200: $white-87-opacity,
+        300: $white-87-opacity,
+        400: $white-87-opacity,
+        500: $white-87-opacity,
+        600: $white-87-opacity,
+        700: $white-87-opacity,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: $black-87-opacity,
+        A700: black,
+    )
+);
+
+$muraai-warn: (
+    50: #ffebee,
+    100: #ffcdd2,
+    200: #ef9a9a,
+    300: #e57373,
+    400: #ef5350,
+    500: #f44336,
+    600: #e53935,
+    700: #d32f2f,
+    800: #c62828,
+    900: #b71c1c,
+    A100: #ff8a80,
+    A200: #ff5252,
+    A400: #ff1744,
+    A700: #d50000,
+    contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: $white-87-opacity,
+        900: $white-87-opacity,
+        A100: $black-87-opacity,
+        A200: white,
+        A400: white,
+        A700: white,
+    )
+);
+ 
+$muraai-accent: (
+    50: #fff3e0,
+    100: #ffe0b2,
+    200: #ffcc80,
+    300: #ffb74d,
+    400: #ffa726,
+    500: #ff9800,
+    600: #fb8c00,
+    700: #f57c00,
+    800: #ef6c00,
+    900: #e65100,
+    A100: #ffd180,
+    A200: #ffab40,
+    A400: #ff9100,
+    A700: #ff6d00,
+
+    contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: white,
+        400: white,
+        500: $white-87-opacity,
+        600: $white-87-opacity,
+        700: $white-87-opacity,
+        800: $white-87-opacity,
+        900: $white-87-opacity,
+        A100: $black-87-opacity,
+        A200: white,
+        A400: white,
+        A700: $white-87-opacity,
+    )
+);
+
+
+$muraai-primary-accent--default: #00bcd4;
+$muraai-primary-accent--hue-1: #84ffff;
+$muraai-primary-accent--hue-2: #18ffff;
+$muraai-primary-accent--hue-3: #00b8d4;
+
+$muraai-secondary-accent--default: #fb8c00;
+$muraai-secondary-accent--hue-1: #ffd180;
+$muraai-secondary-accent--hue-2: #ffab40;
+$muraai-secondary-accent--hue-3: #ff6d00;
+
+// Warn color palette
+$muraai-warn-color--default: #ff1744;
+$muraai-warn-color--hue-1: #ff8a80;
+$muraai-warn-color--hue-2: #ff5252;
+$muraai-warn-color--hue-3: #d50000;
+
+// Grayscale
+$muraai-white: #fff;
+$muraai-black: #000;
+
+// Dark
+$muraai-dark-color--default: #78909c;
+$muraai-dark-color--hue-1: #eceff1;
+$muraai-dark-color--hue-3: #546e7a;
+
+$muraai-drop-shadow: #888888;
+
+$muraai-primary-text-color: rgba($muraai-black, .87);
+$muraai-secondary-text-color: rgba($muraai-black, .54);
+
+$muraai-hint-text-color: rgba($muraai-black, .38);
+$muraai-disabled-text-color: rgba($muraai-black, .26);
+
+$muraai-divider-color: rgba($muraai-black, .07);
+
+$muraai-gray-background: #fafafa;
+
+$muraai-gray-label: rgb(186, 186, 186);
+
+$muraai-breadcrumbs-background: #fafafa;

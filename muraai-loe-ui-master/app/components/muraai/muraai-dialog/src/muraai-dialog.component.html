@@ -1,0 +1,7 @@
+
+<h5 mdDialogTitle>{{header}}</h5>
+<md-divider></md-divider>
+<md-dialog-content>
+ <!--<mu-form [formData]="formData" (save)="submit($event)" (btnClick)="close($event)" (valueChange)="onDataChange($event)"></mu-form>-->
+  <muraai-signature [id]="'sign'" (getSignature)="getSignFromComponent($event)"></muraai-signature>
+</md-dialog-content>

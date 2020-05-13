@@ -1,0 +1,85 @@
+@import "styles/theming";
+
+:host /deep/ .mat-tab-header {
+  align-self: center !important;
+}
+
+//:host /deep/ .mat-tab-body-content {
+//  overflow: hidden !important;
+//}
+md-card {
+  margin: 8px;
+}
+
+table {
+  display: flex;
+}
+
+.mat-input-container {
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+tr {
+  display: inline-table;
+  width: 100%;
+}
+
+:host /deep/ .mat-ink-bar {
+  background-color: mat-color($primary);
+}
+
+tbody {
+  width: 100%;
+}
+
+td {
+  width: 15%;
+}
+
+.button-row {
+  float: right;
+}
+
+@media screen and (max-width: 900px) {
+  tr {
+    display: grid;
+  }
+  td {
+    width: 100%;
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+:host /deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: mat-color($accent) !important;
+}
+
+adf-create-process-attachment >>> .mat-raised-button {
+  background-color: mat-color($accent) !important;
+  color: #fff;
+}
+
+@media screen and (max-width: 699px) {
+  .big-screen {
+    display: none;
+  }
+  .small-screen {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .big-screen {
+    display: block;
+  }
+  .small-screen {
+    display: none;
+  }
+}

@@ -1,0 +1,78 @@
+.heading {
+    padding: 16px 20px;
+    font-family: Muli;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    float: left;
+    width: calc(100% - 40px);
+}
+
+.column-div {
+    padding: 0px 20px;
+    float: left;
+}
+
+.form-container {
+    background: #fff;
+    float: left;
+}
+
+.column-div>div {
+    width: 100%;
+}
+
+.footer {
+    padding: 12px 20px;
+    border-top: 1px solid #eee;
+    float: left;
+    width: calc(100% - 40px);
+    text-align: right;
+}
+
+.is-upgraded>label {
+    font-size: 14px;
+    top: 4px;
+    visibility: visible;
+    font-weight: bold;
+    opacity: 0.54;
+    color: #000;
+}
+
+.mdl-textfield.is-focused .mdl-textfield__label {
+    color: #ff9100 !important;
+}
+
+.mdl-textfield.is-dirty .mdl-textfield__label, .mdl-textfield.has-placeholder .mdl-textfield__label {
+    font-size: 14px;
+    color: #000;
+    visibility: visible !important;
+    font-weight: bold;
+    opacity: 0.54;
+}
+
+.mdl-selectfield__select {
+    height: 30px;
+}
+
+.mdl-selectfield__label:after {
+    background-color: #ff9100 !important;
+}
+
+.mdl-selectfield__select>option:hover, .mdl-selectfield__select>option:selected {
+    background: #ff9100;
+}
+
+.mdl-selectfield.is-dirty .mdl-selectfield__icon {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.mdl-button {
+    opacity: 0.54;
+    color: #000;
+    font-weight: bold;
+}
+
+.mdl-button.mdl-button--colored {
+    color: rgb(255,152,0);
+}

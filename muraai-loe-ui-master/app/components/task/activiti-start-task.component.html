@@ -1,0 +1,55 @@
+<div class="heading">
+    New Task
+</div>
+<div class="form-container">
+    <div class="mdl-cell mdl-cell--12-col  column-div">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" [(ngModel)]="name" id="taskName" />
+            <label class="mdl-textfield__label" for="taskName">{{'START_TASK.DIALOG.LABEL.NAME'|translate}}</label>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col  column-div">
+        <adf-date-widget [dateFormat]="'YYYY-MM-DD'" [selectedDate]="date" (dateChanged)="onDateChanged($event)"></adf-date-widget>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col  column-div">
+        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+            <select id="taskProcess" class="mdl-selectfield__select">
+                <option value=""></option>
+            </select>
+            <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+            <label class="mdl-selectfield__label" for="taskProcess">{{'Process'|translate}}</label>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col  column-div">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" [(ngModel)]="assignee" id="taskAssignee" />
+            <label class="mdl-textfield__label" for="taskAssignee">{{'Assignee'|translate}}</label>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col  column-div">
+        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+            <select id="taskFormId" class="mdl-selectfield__select">
+              <option value="null"></option>
+              <option *ngFor="let form of forms" [value]="form.id">
+                  {{form.name}}
+              </option>
+          </select>
+            <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+            <label class="mdl-selectfield__label" for="taskFormId">{{'Form'|translate}}</label>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--12-col  column-div">
+        <div class="mdl-textfield mdl-js-textfield">
+            <textarea class="mdl-textfield__input" type="text" [(ngModel)]="description" rows="3" id="taskDescription"></textarea>
+            <label class="mdl-textfield__label" id="task-description-label" for="taskDescription">{{'START_TASK.DIALOG.LABEL.DESCRIPTION'|translate}}</label>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <button type="button" id="button-cancel" (click)="cancel()" class="mdl-button close">
+        {{'START_TASK.DIALOG.ACTION.CANCEL'|translate}}
+    </button>
+    <button type="button" id="button-start" (click)="start()" class="mdl-button mdl-button--colored">
+        {{'START_TASK.DIALOG.ACTION.START'|translate}}
+    </button>
+</div>

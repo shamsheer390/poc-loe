@@ -1,0 +1,41 @@
+<md-card >
+    <form [formGroup]="myForm" (ngSubmit)="register(myForm)">
+        <md-grid-list cols="2" rowHeight="4:1">
+            <md-grid-tile>
+                <md-input-container class="width">
+                    <input mdInput placeholder="Client Name" required class="form-control" formControlName="clientName" id="clientName" [(ngModel)]="client.clientName"
+                        name="name" minlength="2">
+                    <md-error *ngIf="myForm.controls.clientName.hasError('required')">
+                        This field is required
+                    </md-error>
+                    <md-error *ngIf="myForm.controls.clientName.hasError('minlength')">
+                        name should be minimum 2 character
+                    </md-error>
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container class="width">
+                    <input mdInput type="email" required placeholder="Email" class="form-control" formControlName="email" id="email" [(ngModel)]="client.email"
+                        name="email">
+
+                    <md-error *ngIf="myForm.controls.email.hasError('required')">
+                        This field is required
+                    </md-error>
+                    <md-error *ngIf="myForm.controls.email.hasError('pattern')">
+                        Invalid Email pattern
+                    </md-error>
+                </md-input-container>
+            </md-grid-tile>
+        </md-grid-list>
+        <div class="pull-right">
+            <button md-raised-button color="accent" type="submit">Verify</button>
+        </div>
+    </form>
+
+</md-card>
+<md-card  class="template-height" *ngIf="isTemplateGenration">
+        <div >
+            <md-checkbox [(ngModel)]="status">I have my own Template</md-checkbox>
+            <button md-raised-button type="button" class="pull-right" color="accent" (click)="checkStatus()">Next</button>
+        </div>   
+</md-card>

@@ -1,0 +1,27 @@
+:host {
+    width: 100%;
+}
+
+.activiti-task-header__label {
+    font-weight: bold;
+    color: gray;
+    float: left;
+    width: 120px;
+}
+
+.activiti-task-header__value {
+    color: rgb(68, 138, 255);
+    float: left;
+    color: #000;
+    width: 232px;
+    word-wrap: break-word;
+}
+
+.material-icons {
+    cursor: pointer;
+}
+
+.mdl-grid {
+    margin: 8px;
+    width: calc(100% - 32px);
+}

@@ -1,0 +1,29 @@
+{
+    "INVOICE_UPLOAD":{
+        "TITLE":"Invoice Upload",
+        "LABELS":{
+            "DRAG_LABEL":"DRAG HERE",
+            "NOTIFICATION":"Notification",
+            "YES":"Yes",
+            "NO":"No"
+        },
+        "SUCCESS_MESSAGE":"Your Invoice uploaded Successfully. Do you want to upload more invoices?"
+    },
+     "FILE_UPLOAD": {
+        "BUTTON": {
+            "UPLOAD_FILE": "Upload file",
+            "UPLOAD_FOLDER": "Upload folder",
+            "CANCEL_ALL": "Cancell all"
+        },
+        "MESSAGES": {
+            "SINGLE_COMPLETED": "upload complete",
+            "COMPLETED": "uploads complete",
+            "PROGRESS": "Upload in progress...",
+            "FOLDER_ALREADY_EXIST": "The folder {0} already exist",
+            "FOLDER_NOT_SUPPORTED": "Folder upload isn't supported by your browser"
+        },
+        "ACTION": {
+            "UNDO": "Undo"
+        }
+    }
+} 

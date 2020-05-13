@@ -1,0 +1,33 @@
+<div class="main-container">
+    <div class="comments-header">
+        Comments({{comments?.length}})
+    </div>
+    <div class="comments-container">
+        <div class="text-area-container">
+            <md-input-container class="md-block">
+                <textarea mdInput type="text" [(ngModel)]="message" rows="1" id="commentText" md-select-on-focus placeholder="Message"></textarea>
+            </md-input-container>
+        </div>
+        <div class="button-container">
+            <button md-mini-fab (click)="add()" color="accent">
+              <md-icon md-tooltip="Click to add">add</md-icon>
+            </button>
+        </div>
+    </div>
+    <div class="comments-container" *ngFor="let comment of comments">
+        <div class="img-container">
+            <div class="user-image">
+                {{getUserShortName(comment)}}
+            </div>
+        </div>
+        <div class="user-name">
+            {{comment?.createdBy?.firstName}} {{comment?.createdBy?.lastName}}
+        </div>
+        <div class="message">
+            {{comment?.message}}
+        </div>
+        <div class="message-time">
+            {{comment?.created |date: 'MMM dd y, hh:mm a'}}
+        </div>
+    </div>
+</div>

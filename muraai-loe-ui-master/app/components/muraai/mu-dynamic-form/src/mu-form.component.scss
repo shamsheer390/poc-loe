@@ -1,0 +1,32 @@
+@import 'styles/theming';
+
+:host /deep/ .mat-raised-button{
+  color: white;
+  background-color: mat-color($accent);
+}
+
+.form-padding {
+  margin: 0px 5px;
+}
+
+md-grid-list{
+  margin:0 8px 0 8px;
+}
+mu-field {
+  width: 100%;
+}
+
+.button-container {
+  display: inline-block;
+}
+
+.width-100 {
+  width: 100%;
+  margin: 0px 10px 0px 10px;
+}
+.pull-right {
+  float: right;
+}
+/* .md-grid-tile-fix {
+  margin-top: 50px !important;
+} */

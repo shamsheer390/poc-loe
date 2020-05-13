@@ -1,0 +1,39 @@
+{
+
+    "TITLE": "Task",
+    "LABELS.TOOL_TIP":"Change Language",
+    "CONTACT_DETAILS": {
+      "TITLE": "Contract Details",
+      "LAST_NAME": "Last name",
+      "INDUSTRY": "Industry",
+      "IS_EXISTING_CLIENT": "Is existing client",
+      "IS_THERE_A_CONFLICT": "Is there a conflict",
+      "ADDRESS": "Address",
+      "FIRST_NAME": "First name",
+      "SERVICE_TYPE":"Service type",
+      "STATUS": "Status"
+    },
+    "DOCUMENT_ENTRY": {
+      "TITLE": "Document entry",
+      "CHECK_BOX":"Does client require own document?",
+      "SERVICE_TYPE":"Service type",
+      "MAILING_INSTRUCTIONS":"Mailing Instructions",   
+      "CLIENT_NAME": "Client name",
+      "ADDRESS": "Address",
+      "CONTACT_NAME": "Contact name",
+      "DESCRIPTION_OF_ENGAGEMENT": "Description of engagement",
+      "ENGAGEMENT_PARTNER": "Engagement partner",
+      "DOCUMENT_TITLE": "Title",
+      "NATURE_SCOPE_OF_ENGAGEMENT": "Nature scope of engagement",
+      "RESPONSIBILITIES_SPECIFIC": "Responsibilities specific to Engagement",
+      "DATE_OF_PUBLICATION": "Date of Publication"
+    },
+    "DOCUMENT": {
+      "TITLE": "Document",
+      "DOCUMENT_VERSION":"Document version"
+    },
+    "PROCESS": {
+      "TITLE": "Process"
+    }
+  }
+  

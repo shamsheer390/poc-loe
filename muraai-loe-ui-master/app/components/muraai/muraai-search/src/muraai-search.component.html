@@ -1,0 +1,19 @@
+<div class="search search-bar">
+  <table>
+    <tr>
+      <td class="searchtext">
+        <input type="text" #data placeholder="{{name}}"
+               (keyup.Esc)="closeAdvanceSearch();data.value=''"
+               (keyup.Enter)="onSearch(data.value)">
+      </td>
+      <td>
+          <i (click)="toggleAdvanceSearch()" class="material-icons" md-tooltip="{{'MURAAI_SEARCH.BUTTON_LABEL.ADVANCE'  | translate}}"
+             mdTooltipPosition="left">{{icon}}</i>
+      </td>
+    </tr>
+  </table>
+  <md-card *ngIf="openAdvanceSearch" class="advance-search">
+    <mu-form [formData]="formData" (save)="submit($event)" (btnClick)="onBtnClicked($event)" ></mu-form>
+  </md-card>
+</div>
+

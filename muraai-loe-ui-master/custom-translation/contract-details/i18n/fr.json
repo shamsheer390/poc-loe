@@ -1,0 +1,14 @@
+{
+  "TITLE": "Bienvenue",
+  "LABELS": {
+    "FIRST_NAME": "Prénom",
+    "LAST_NAME": "Nom de famille",
+    "EMAIL": "Email",
+    "ADDRESS": "Adresse",
+    "SERVICE_TYPE": "Type de service",
+    "INDUSTRY_TYPE": "Type d'industrie",
+    "CONTRACT_ENTRY": "Possibilité d'entrée",
+    "CONTRACT_DETAILS":"Détails de l'opportunité",
+    "TOOL_TIP": "Changer de langue"
+  }
+}

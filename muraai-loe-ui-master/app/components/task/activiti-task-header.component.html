@@ -1,0 +1,44 @@
+<div *ngIf="taskDetails">
+    <div class="mdl-grid mdl-shadow--2dp">
+        <div class="mdl-cell mdl-cell--12-col" data-automation-id="header-assignee">
+            <div class="activiti-task-header__label">{{ 'Assignee' | translate }}: </div>
+            <div class="activiti-task-header__value" *ngIf="hasAssignee()">{{ taskDetails.assignee.firstName }} {{ taskDetails.assignee.lastName }}</div>
+            <div class="activiti-task-header__value" *ngIf="!hasAssignee()">{{ 'TASK_DETAILS.ASSIGNEE.NONE' | translate }}</div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col" data-automation-id="header-due-date">
+            <div class="activiti-task-header__label">{{ 'Due Date' | translate }}: </div>
+            <div class="activiti-task-header__value" *ngIf="taskDetails?.dueDate">{{ taskDetails.dueDate | date }}</div>
+            <div class="activiti-task-header__value" *ngIf="!taskDetails?.dueDate">{{ 'TASK_DETAILS.DUE.NONE' |translate }}</div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col" data-automation-id="header-assignee">
+            <div class="activiti-task-header__label">{{ 'Parent Task' | translate }}: </div>
+            <div class="activiti-task-header__value" *ngIf="taskDetails?.parentTaskName">{{ taskDetails.parentTaskName }}</div>
+            <div class="activiti-task-header__value" *ngIf="!taskDetails?.parentTaskName">{{ 'Nil' | translate }}</div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col" data-automation-id="header-due-date">
+            <div class="activiti-task-header__label">{{ 'Created' | translate }}: </div>
+            <div class="activiti-task-header__value" *ngIf="taskDetails?.created">{{ taskDetails.created | date }}</div>
+            <div class="activiti-task-header__value" *ngIf="!taskDetails?.created">{{ 'TASK_DETAILS.DUE.NONE' |translate }}</div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col" data-automation-id="header-assignee">
+            <div class="activiti-task-header__label">{{ 'Created By' | translate }}: </div>
+            <div class="activiti-task-header__value" *ngIf="hasAssignee()">{{ taskDetails.assignee.firstName }} {{ taskDetails.assignee.lastName }}</div>
+            <div class="activiti-task-header__value" *ngIf="!hasAssignee()">{{ 'TASK_DETAILS.ASSIGNEE.NONE' | translate }}</div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col" data-automation-id="header-assignee">
+            <div class="activiti-task-header__label">{{ 'Process Name' | translate }}: </div>
+            <div class="activiti-task-header__value" *ngIf="taskDetails?.processDefinitionName">{{ taskDetails.processDefinitionName }} v.{{ taskDetails.processDefinitionVersion }}</div>
+            <div class="activiti-task-header__value" *ngIf="!taskDetails?.processDefinitionName">{{ 'Nil' | translate }}</div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col" data-automation-id="header-assignee">
+            <div class="activiti-task-header__label">{{ 'Urgency' | translate }}: </div>
+            <div class="activiti-task-header__value" *ngIf="taskDetails?.priority">{{ taskDetails.priority }}</div>
+            <div class="activiti-task-header__value" *ngIf="!taskDetails?.priority">{{ 'Nil' | translate }}</div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col" data-automation-id="header-assignee">
+            <div class="activiti-task-header__label">{{ 'Description' | translate }}: </div>
+            <div class="activiti-task-header__value" *ngIf="taskDetails?.description">{{ taskDetails.description }}</div>
+            <div class="activiti-task-header__value" *ngIf="!taskDetails?.description">{{ 'Nil' | translate }}</div>
+        </div>
+    </div>
+</div>

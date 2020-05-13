@@ -1,0 +1,13 @@
+{
+    "INVOICE_SUMMARY":{
+        "TITLE":"Invoice Summary",
+        "LABELS":{
+            "INVOICE_NUMBER":"Invoice Number",
+            "PO_NUMBER":"PO Number",
+            "INVOICE_STATUS":"Invoice Status",
+            "VENDOR":"Vendor",
+            "ENTITY_NAME":"Entity Name",
+            "SEARCH":"Search Invoice Summary"
+        }
+    }
+}

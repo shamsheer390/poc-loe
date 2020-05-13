@@ -1,0 +1,103 @@
+<loe-ui [formData]=""></loe-ui>
+
+<!-- <md-card style="display: flex;margin: 1em;margin-bottom: 50px;">
+    <div style="width: 49%">
+        <md-grid-list cols="2" rowHeight="4:1">
+            <md-grid-tile>
+                <md-input-container class="width" floatPlaceholder="never">
+                    <input type="text" mdInput id="engagement_services" (blur)="doDocumentData()" placeholder="Engagement Services" [mdAutocomplete]="auto">
+                </md-input-container>
+
+                <md-autocomplete #auto="mdAutocomplete">
+                    <md-option *ngFor="let option of engagementServiceList" [value]="option">
+                        {{ option }}
+                    </md-option>
+                </md-autocomplete>
+            </md-grid-tile>
+
+            <md-grid-tile>
+                <md-input-container class="width" floatPlaceholder="never">
+
+                    <input mdInput [mdDatepicker]="picker" placeholder="Date Of publication" (blur)="doDocumentData()" id="date_of_publication">
+                    <button mdSuffix [mdDatepickerToggle]="picker"></button>
+
+                </md-input-container>
+                <md-datepicker #picker></md-datepicker>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container  class="width height-textarea"  floatPlaceholder="never">
+
+                    <textarea mdInput placeholder="Mailing Instructions" (blur)="doDocumentData()" id="mail_inst" [(ngModel)]="client.mailingInstruction"></textarea>
+
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container class="width" floatPlaceholder="never">
+                    <input mdInput placeholder="Client Name" (blur)="doDocumentData()" class="form-control" id="client_name" [(ngModel)]="client.clientName"
+                        name="name" minlength="2">
+
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container class="width height-textarea"  floatPlaceholder="never">
+                    <textarea mdInput required placeholder="Address" (blur)="doDocumentData()" id="address" [(ngModel)]="client.address"></textarea>
+
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container class="width" floatPlaceholder="never">
+                    <input mdInput placeholder="Contact Name" (blur)="doDocumentData()" class="form-control" id="contact" [(ngModel)]="client.contactName"
+                        name="name" minlength="2">
+
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container  class="width height-textarea"  floatPlaceholder="never">
+                    <textarea mdInput placeholder="Description of Engagement" (blur)="doDocumentData()" id="engagement_desc" [(ngModel)]="client.descriptionOfEngagement"></textarea>
+
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container class="width"  floatPlaceholder="never">
+                    <input mdInput placeholder="Engagement Partner" (blur)="doDocumentData()" class="form-control" id="engagement_partner" [(ngModel)]="client.engagementPartner"
+                        name="name" minlength="2">
+
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container class="width" floatPlaceholder="never">
+                    <input mdInput placeholder="Title" class="form-control" (blur)="doDocumentData()" id="title" [(ngModel)]="client.title" name="title"
+                        minlength="2">
+
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container class="width"  floatPlaceholder="never">
+                    <input mdInput placeholder="Nature & Scope Of Engagement" (blur)="doDocumentData()" class="form-control" id="engagement_nature"
+                        [(ngModel)]="client.natureOfEngagementPartner" name="natureOfEngagementPartner">
+
+                </md-input-container>
+            </md-grid-tile>
+            <md-grid-tile>
+                <md-input-container class="width"  floatPlaceholder="never">
+                    <input mdInput placeholder="Responsibilities specific to Engagement" (blur)="doDocumentData()" class="form-control" id="engagement_responsibilities"
+                        [(ngModel)]="client.engagement_responsibilities" name="engagement_responsibilities">
+
+                </md-input-container>
+            </md-grid-tile>
+            
+        </md-grid-list>
+          <div  class="pull-right">
+                <button md-raised-button color="accent" (click)="register()">Save</button>
+            </div>
+
+    </div>
+    <div style="width: 50%">
+        <iframe id="pdfV" style="height: 100%"> </iframe>
+    </div>
+
+</md-card>
+<md-card style="height: 150px;padding: 0px;box-shadow: none;">
+            <muraai-signature [id]="'one'" (getSignature)="getSign($event)"></muraai-signature>
+ </md-card>
+ -->

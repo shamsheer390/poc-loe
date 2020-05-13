@@ -1,0 +1,31 @@
+<div class="setting-container">
+    <div>
+        <md-card class="setting-card">
+            <div class="md-card-top-cover">
+                <md-card-title>SETTINGS</md-card-title>
+            </div>
+            <md-card-content>
+                <md-card-subtitle>
+                    BPM host URL configuration
+                </md-card-subtitle>
+                <div class="input-container">
+                    <md-icon class="link-icon">link</md-icon>
+                    <md-input-container>
+                        <input
+                            tabindex="1"
+                            type="text" mdInput
+                            id="bpmHost"
+                            (change)="onChangeBPMHost($event)"
+                            pattern="^(http|https):\/\/.*[^/]$"
+                            value="{{bpmHost}}"
+                            placeholder="http(s)://host|ip:port(/path)">
+                    </md-input-container>
+                </div>
+                <md-card-actions>
+                    <button md-button class="back-button" onclick="window.history.back()">BACK</button>
+                    <button md-button class="back-button" onclick="window.location.href = '/'">APPLY</button>
+                </md-card-actions>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

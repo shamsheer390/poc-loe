@@ -1,0 +1,42 @@
+.mdl-button--raised.mdl-button--colored{
+  margin: 0px 10px;
+}
+
+.alf-alert-message-text, .alf-confirm-message-text {
+    padding: 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.alf-dialog-box-container {
+    padding: 16px;
+}
+
+.alf-alert-message-header {
+    background: #00acc1;
+    color: #fff;
+    padding: 8px 16px;
+}
+
+.alf-center-align {
+    text-align: center !important;
+}
+
+.alf-alert-box {
+    padding: 4px !important;
+}
+
+.alf-association-action-container {
+    padding: 0px 16px 16px 16px;
+    text-align: right;
+}
+
+.alf-tbl-button {
+    padding: 8px 20px;
+    background: #fb8c00;
+    border: none;
+    color: #fff;
+    margin-bottom: 5px;
+    width: 100px;
+    cursor: pointer;
+}

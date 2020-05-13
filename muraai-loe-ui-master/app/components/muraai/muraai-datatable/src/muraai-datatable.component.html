@@ -1,0 +1,21 @@
+<md-toolbar class="page-header" *ngIf="!noHeader">
+    <span class="header">{{header}}</span>
+    <div class="pull-right">
+        <button md-icon-button (click)="deleteClick()" *ngIf="showRemove">
+        <md-icon md-tooltip="{{'MURAAI_DATA_TABLE.BUTTON_LABEL.DELETE'  | translate}}">delete</md-icon>
+    </button>
+    <button  md-icon-button (click)="saveAllClick()"  *ngIf="showSave" >
+        <md-icon md-tooltip="{{'MURAAI_DATA_TABLE.BUTTON_LABEL.SAVE'  | translate}}">save</md-icon>
+    </button>
+     <button  md-icon-button (click)="addClick()" *ngIf="showAdd">
+        <md-icon md-tooltip="{{'MURAAI_DATA_TABLE.BUTTON_LABEL.ADD'  | translate}}">add</md-icon>
+    </button>
+  </div>
+</md-toolbar> 
+<div class="grid-container" >
+     <alfresco-datatable [data]="tableData" [selectionMode]="selectionMode" [rows]="rowData" (row-select)="getSelectedRow($event)" (row-unselect)="getUnselectedRow($event)"[multiselect]="mutltiSelect" (rowDblClick)="rowDblClick($event)">
+    </alfresco-datatable> 
+</div>
+<alfresco-pagination *ngIf="showPagination" (nextPage)="nextPage($event)" (prevPage)="prevPage($event)" (changePageSize)="changeSize($event)"
+    [pagination]="pagination">
+</alfresco-pagination>

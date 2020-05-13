@@ -1,0 +1,241 @@
+@import '../../../styles/theming';
+
+:host {
+    width: 100%;
+}
+
+.error-dialog h3 {
+    margin: 16px 0;
+}
+
+activiti-form>>>.activiti-form-container {
+    width: 384px;
+    margin-left: calc((100% - 384px)/2);
+    margin-top: 8px;
+}
+
+:host /deep/ .mat-ink-bar {
+    background-color: mat-color($primary);
+}
+
+activiti-form>>>.mdl-button {
+    color: mat-color($accent) !important;
+}
+
+.alf-am-breadcrumb-container {
+    height: 48px;
+    border-bottom: 1px solid #e2e2e2;
+    float: left;
+    width: 100%;
+}
+
+.alf-am-task-form-container {
+    height: calc(100% - 37px);
+    float: left;
+    width: calc(100% - 40%);
+    background: whitesmoke;
+    overflow: auto;
+}
+
+@media screen and (max-width: 699px) {
+    .alf-am-task-form-container {
+        width: calc(100% - 46px);
+    }
+  }
+.menu-extended {
+    position: relative;
+    z-index: 2;
+    color: #080707;
+    float: right;
+    top: 15px;
+    margin-right: 15px;
+  }
+.alf-am-task-details-container {
+    float: left;
+    width: 39%;
+    height: calc(100% - 47px);
+    border-left: 2px solid #e2e2e2;
+    overflow: auto;
+}
+
+.alf-am-breadcrumb-container>i {
+    height: 24px;
+    padding: 12px 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.alf-am-breadcrumb-container .alf-am-title {
+    float: left;
+    font-family: inherit;
+    font-size: 13px;
+    padding: 18px 0px;
+    font-weight: 600;
+}
+
+:host /deep/ .mdl-button--raised.mdl-button--colored {
+    background: mat-color($accent);
+}
+
+activiti-task-details>>>h2 {
+    background: #dadada;
+    padding: 5px 10px;
+    color: #000;
+    font-size: 18px;
+}
+
+activiti-task-details>>>activiti-task-header>>>>div {
+    border: 1px solid #e6e3e3;
+}
+
+activiti-task-details>>>activiti-task-header>>>+div {
+    border: 1px solid #e6e3e3;
+    margin-top: 10px;
+}
+
+activiti-task-details>>>activiti-task-header>>>+div+div {
+    margin-top: 10px;
+}
+
+activiti-task-details>>>activiti-form>>>.mdl-card__title {
+    background: #dadada;
+}
+
+activiti-task-details>>>activiti-form>>>.mdl-card__title button {
+    background: #448aff;
+    color: #fff;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+}
+
+activiti-task-details>>>button {
+    background: mat-color($accent);
+    color: #fff;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+    margin-left: 10px;
+}
+
+activiti-task-details>>>button[disabled] {
+    background: #d2d1d4;
+    color: #8e8c8c;
+}
+
+activiti-task-details>>>.mdl-textfield {
+    padding: 5px 0px;
+}
+
+activiti-task-details>>>.mdl-textfield label {
+    color: mat-color($accent);
+}
+
+activiti-task-details>>>.mdl-textfield input:focus {
+    border: 2px solid #b3d4fc;
+    border-radius: 3px;
+}
+
+activiti-task-details>>>activiti-checklist, activiti-task-details>>>activiti-people, activiti-task-details>>>activiti-comments {
+    float: left;
+    width: 100%;
+}
+
+activiti-task-details>>>activiti-checklist>>>#checklist-label, activiti-task-details>>>activiti-comments>>>.activiti-label, activiti-task-details>>>activiti-people>>>#people-title {
+    width: calc(100% - 55px);
+    float: left;
+    margin-right: 0px;
+    background: #dadada;
+    line-height: 34px;
+    padding-left: 20px;
+}
+
+activiti-task-details>>>activiti-checklist>>>#checklist-label:after, activiti-task-details>>>activiti-comments>>>.activiti-label:after, activiti-task-details>>>activiti-people>>>#people-title:after {
+    font-size: 16px;
+    float: right;
+    position: relative !important;
+    top: 0px !important;
+    right: 0px !important;
+    left: 0px !important;
+    border-radius: 0px !important;
+    padding: 6px;
+}
+
+activiti-task-details>>>activiti-checklist>>>#checklist-none-message, activiti-task-details>>>activiti-comments>>>div[data-automation-id='comments-none'], activiti-task-details>>>activiti-people>>>#no-people-label {
+    float: left;
+    border: 1px solid #d4cfcf;
+    width: calc(100% - 22px);
+    padding: 5px 10px;
+}
+
+activiti-task-details>>>activiti-checklist>>>#add-checklist, activiti-task-details>>>activiti-comments>>>#addComment, activiti-task-details>>>activiti-people>>>#addPeople {
+    background: mat-color($accent);
+    color: #fff;
+    padding: 5px;
+    float: left;
+    margin-left: 1px;
+}
+
+activiti-task-details>>>activiti-people>>>.menu-container {
+    float: left;
+    border: 1px solid #d4cfcf;
+    width: calc(100% - 2px);
+}
+
+activiti-task-details>>>activiti-people>>>.menu-container ul {
+    margin: 0px;
+}
+
+activiti-task-details>>>activiti-people>>>.menu-container ul li {
+    padding: 5px 20px;
+}
+
+.alf-am-icon-container {
+    float: right;
+}
+
+.alf-am-icon-container>i {
+    padding: 15px 9px;
+    float: left;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.alf-am-icon-container>i:hover {
+    color: mat-color($accent);
+}
+
+.alf-am-icon-container .devider {
+    float: left;
+    border: 1px solid #e2e2e2;
+    height: 46px;
+}
+
+.no-form-container {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Muli;
+    padding: 16px;
+}
+
+.view-container {
+  height: calc(100% - 37px);
+  float: left;
+  width: 0;
+  height: 0;
+  background: whitesmoke;
+  overflow-x: hidden;
+}
+
+.task-container{
+  float: left;
+  width: 100%;
+  height: auto;
+  border-left: 2px solid #e2e2e2;
+  overflow: auto;
+  max-height: 650px;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 699px) {
+    .big-screen {
+        display: none;
+    }
+}

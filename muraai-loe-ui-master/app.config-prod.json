@@ -1,0 +1,14 @@
+{
+  "ecmHost": "http://localhost:5555/ecm",
+  "bpmHost": "http://localhost:5555/bpm",
+  "docuSignHost": "http://localhost:5555/docusign",
+  "application": {
+    "name": "Alfresco"
+  },
+  "account": {
+    "email": "balaji.thangavel@muraai.com",
+    "password": "Dharan123",
+    "integratorKey": "0562f8bb-4845-41a4-9f73-6f4e7c223771",
+    "userId": "7953058"
+  }
+}

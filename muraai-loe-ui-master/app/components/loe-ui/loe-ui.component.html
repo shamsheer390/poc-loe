@@ -1,0 +1,209 @@
+<div class="big-screen">
+  <md-card>
+    <i class="material-icons" md-icon-button [mdMenuTriggerFor]="menu" md-tooltip="{{'LABELS.TOOL_TIP'  | translate}}" mdTooltipPosition="below"
+      style="position: absolute;  left: 15px;   top: 10px; cursor: pointer;">language</i>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item (click)="changeToEnglish()">
+        <span>English</span>
+      </button>
+      <button md-menu-item (click)="changeToFrench()">
+        <span>French</span>
+      </button>
+    </md-menu>
+    <md-tab-group [selectedIndex]="activeTab" (selectChange)="tabChange($event)">
+      <md-tab label="{{'CONTACT_DETAILS.TITLE' | translate}}" *ngIf="tabShow">
+        <mu-form [formData]="fieldDataInOrder"></mu-form>
+      </md-tab>
+      <md-tab label="{{'DOCUMENT_ENTRY.TITLE' | translate}}" *ngIf="tabShow">
+        <br/>
+        <md-checkbox style="margin-top:10px;" [(ngModel)]="checked"> {{'DOCUMENT_ENTRY.CHECK_BOX' | translate}}</md-checkbox>
+        <table *ngIf="!checked">
+          <tr>
+            <td>
+              <md-input-container>
+                <label>{{'DOCUMENT_ENTRY.SERVICE_TYPE' | translate}}</label>
+                <input type="text" mdInput placeholder="{{'DOCUMENT_ENTRY.SERVICE_TYPE' | translate}}" [value]="serviceType" disabled>
+              </md-input-container>
+            </td>
+            <td>
+              <md-input-container class="width" floatPlaceholder="never">
+                <label>{{'DOCUMENT_ENTRY.DATE_OF_PUBLICATION' | translate}}</label>                  
+                <input mdInput [mdDatepicker]="picker"  id="dateOfPublication" [(ngModel)]="document.date">
+                <button mdSuffix [mdDatepickerToggle]="picker"></button>
+
+              </md-input-container>
+              <md-datepicker #picker></md-datepicker>
+            </td>
+            <td>
+                <md-input-container>
+                    <label>{{'DOCUMENT_ENTRY.ADDRESS' | translate}}</label>
+                  <input mdInput required id="address" [(ngModel)]="document.address">
+                </md-input-container>
+  
+            </td>
+            <td>
+              <md-input-container>
+                <label>{{'DOCUMENT_ENTRY.CLIENT_NAME' | translate}}</label>
+                <input mdInput  [(ngModel)]="document.clientName">
+
+              </md-input-container>
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>
+              <md-input-container>
+                <label>{{'DOCUMENT_ENTRY.CONTACT_NAME' | translate}}</label>
+                <input mdInput  [(ngModel)]="document.contactName">
+
+              </md-input-container>
+
+            </td>
+            <td>
+                <md-input-container>
+                  <label>{{'DOCUMENT_ENTRY.ENGAGEMENT_PARTNER' | translate}}</label>           
+                  <input mdInput  [(ngModel)]="document.engagementPartner">
+                </md-input-container>
+              </td>
+            <td>
+              <md-input-container>
+                  <label>{{'DOCUMENT_ENTRY.DESCRIPTION_OF_ENGAGEMENT' | translate}}</label>
+                <input mdInput [(ngModel)]="document.descriptionOfEngagement">
+              </md-input-container>
+
+            </td>
+            <td>
+                <md-input-container>
+                    <label>{{'DOCUMENT_ENTRY.MAILING_INSTRUCTIONS' | translate}}</label>
+                  <input mdInput [(ngModel)]="document.mailInstruction">
+                </md-input-container>
+            </td>
+
+
+          </tr>
+
+          <tr>
+<!--             <td>
+              <md-input-container>
+                <input mdInput placeholder="{{'DOCUMENT_ENTRY.DOCUMENT_TITLE' | translate}}" [(ngModel)]="document.title" name="title">
+              </md-input-container>
+
+            </td> -->
+            <td>
+              <md-input-container>
+                  <label>{{'DOCUMENT_ENTRY.NATURE_SCOPE_OF_ENGAGEMENT' | translate}}</label>
+                <input mdInput [(ngModel)]="document.natureOfEngagementPartner">
+              </md-input-container>
+
+            </td>
+            <td>
+              <md-input-container>
+                  <label>{{'DOCUMENT_ENTRY.RESPONSIBILITIES_SPECIFIC' | translate}}</label>
+                <input mdInput [(ngModel)]="document.engagementResponsibilities">
+              </md-input-container>
+            </td>
+          </tr>
+
+          <tr *ngIf="editTerms">
+            <td>
+              <md-input-container style="height: 81px;">
+                <textarea mdInput row="4" placeholder="Services" [(ngModel)]="document.service"></textarea>
+              </md-input-container>
+            </td>
+            <td>
+              <md-input-container style="height: 81px;">
+                <textarea mdInput row="4" placeholder="Timely Performance" [(ngModel)]="document.timelyPerformance"></textarea>
+              </md-input-container>
+            </td>
+          </tr>
+          <tr *ngIf="editTerms">
+            <td>
+              <md-input-container style="height: 81px;">
+                <textarea mdInput row="4" placeholder="Client’s Responsibilities " [(ngModel)]="document.clientResposiblity"></textarea>
+              </md-input-container>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="pull-right">
+                <button md-raised-button color="accent" (click)="onUpdateDocument()">Preview</button>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div *ngIf="checked">
+          <div>
+            <img src="./../../../assets/upload.jpg" width="40%" height="170px" style="position: relative;left:30%">
+          </div>
+        </div>
+      </md-tab>
+      <md-tab label="{{'DOCUMENT.TITLE' | translate}}">
+        <!-- <div style="margin-bottom: 12px; margin-top: 30px;">
+          <md-select [(ngModel)]="currentVersion" (change)="onSelectChanges()" placeholder="{{'DOCUMENT.DOCUMENT_VERSION' | translate}}">
+            <md-option *ngFor="let version of versionList" [value]="version">
+              {{version}}
+            </md-option>
+          </md-select>
+        </div> -->
+        <!--<iframe id="pdf" style="height: 350px"> </iframe>-->
+        <adf-upload-drag-area *ngIf="processId"
+          [enabled]="true"
+          [parentId]="processId"
+          [showNotificationBar]="false">
+            <adf-process-attachment-list #processAttachList
+              [disabled]="false" [processInstanceId]="processId"
+              (attachmentClick)="onAttachmentClick($event)"
+              [disabled] = "false"
+              (attachmentCreate)="onAttachmentCreate($event)">
+            </adf-process-attachment-list>
+        </adf-upload-drag-area>
+        <adf-create-process-attachment style="float:right; padding: 1px;"
+          [processInstanceId]="processId"
+          (success)="reloadProcessAttachList()">
+        </adf-create-process-attachment>
+        <!-- <adf-process-attachment-list #processAttachList
+        *ngIf="processId"
+        [processInstanceId]="processId"
+        [disabled] = "false"
+        (attachmentClick)="onAttachmentClick($event)">
+        </adf-process-attachment-list> -->
+      </md-tab>
+      <md-tab label="{{'PROCESS.TITLE' | translate}}" *ngIf="tabShow">
+        <button adf-process-audit [process-id]="processId" [format]="'pdf'" [download]="true" md-icon-button mdTooltip="Download Process Audit">
+        <md-icon>assignment_ind</md-icon>
+    </button>
+        <adf-diagram *ngIf="processId && activeTab == 3" [processInstanceId]="processId"></adf-diagram>
+      </md-tab>
+    </md-tab-group>
+
+  </md-card>
+</div>
+
+<div class="small-screen">
+  <md-card>
+  <md-tab-group (selectChange)="mobTbChanged($event)" [selectedIndex]="activeTab">
+    <md-tab label="{{'DOCUMENT.TITLE' | translate}}">
+      <!--<iframe id="pdf2" style="height: 250px"> </iframe>-->
+      <adf-process-attachment-list #processAttachList
+      *ngIf="processId"
+      [processInstanceId]="processId"
+      (attachmentClick)="onAttachmentClick($event)">
+      </adf-process-attachment-list>
+    </md-tab>
+    <md-tab label="COMMENTS">
+      <adf-process-instance-comments *ngIf="processId" [readOnly]="false" [processInstanceId]="processId"></adf-process-instance-comments>
+    </md-tab>
+  </md-tab-group>
+  </md-card>
+</div>
+<div *ngIf="fileShowed">
+  <alfresco-viewer
+      [(showViewer)]="fileShowed"
+      [blobFile]="content"
+      [displayName]="contentName"
+      [overlayMode]="true"
+      [showToolbar]="true">
+  </alfresco-viewer>
+</div>

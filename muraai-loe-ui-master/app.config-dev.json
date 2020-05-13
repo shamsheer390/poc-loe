@@ -1,0 +1,7 @@
+{
+    "ecmHost": "http://172.104.85.31:9999/ecm",
+    "bpmHost": "http://172.104.85.31:9999/bpm",
+    "application": {
+        "name": "Alfresco"
+    }
+}

@@ -1,0 +1,20 @@
+<md-card>
+  <muraai-status-spinner [mode]="mode" [value]="0" [size]="20"
+                         (clickOnSpinner)="clickOnSpinner($event)"></muraai-status-spinner>
+</md-card>
+<md-card>
+  <muraai-status-spinner [color]="'primary'" [mode]="mode" [value]="50" [size]="12"
+                         (clickOnSpinner)="clickOnSpinner($event)"></muraai-status-spinner>
+</md-card>
+<md-card>
+  <muraai-status-spinner [color]="'primary'" [mode]="mode" [value]="100" [size]="20"
+                         (clickOnSpinner)="clickOnSpinner($event)"></muraai-status-spinner>
+</md-card>
+<md-card>
+  <muraai-status-spinner [color]="'warn'" [mode]="mode" [value]="100" [size]="20"
+                         (clickOnSpinner)="clickOnSpinner($event)"></muraai-status-spinner>
+</md-card>
+<md-card>
+  <muraai-status-spinner [color]="'warn'" [mode]="'indeterminate'"
+                         (clickOnSpinner)="clickOnSpinner($event)"></muraai-status-spinner>
+</md-card>

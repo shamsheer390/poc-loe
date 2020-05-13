@@ -1,0 +1,75 @@
+@import 'styles/theming';
+
+.search {
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+table {
+  display: table;
+  width: 100%;
+  background-color: white;
+  border: 1px solid;
+  border-color: rgba(18, 18, 18, 0.18);
+}
+
+.searchtext {
+  width: 100%;
+}
+
+table:hover {
+  box-shadow: 2px 3px 5px -1px rgba(0, 0, 0, .5);
+}
+
+input {
+  height: 30px;
+  outline: none;
+  border: none;
+  text-indent: 1em;
+  width: 100%;
+}
+
+tr {
+  border: 1px solid;
+  border-color: rgba(18, 18, 18, 0.29);
+}
+
+i {
+  color: mat-color($primary);
+  cursor: pointer;
+}
+
+.advance-search {
+  background-color: white;
+  height: fit-content;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.13);
+  border-radius: 0 0 2px 2px;
+  position: absolute;
+  z-index: 9;
+  box-shadow: 2px 3px 5px -1px rgba(0, 0, 0, .5);
+  width: calc(100% - 3px);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.advance-search:hover {
+  box-shadow: 5px 5px 5px rgba(18, 18, 18, 0.11);
+}
+
+:host /deep/ .mat-grid-tile .mat-figure {
+  height: 50px;
+}
+
+:host /deep/ md-grid-list {
+  padding-bottom: 95px !important;
+}
+
+:host /deep/ .mat-raised-button {
+  line-height: 30px !important;
+}

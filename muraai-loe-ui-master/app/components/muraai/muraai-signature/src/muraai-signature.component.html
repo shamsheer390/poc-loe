@@ -1,0 +1,15 @@
+<div class="signature" id="{{currentSignId}}" (window:resize)="getHeightAndWidth()">
+  <div class="signature-box">
+    <signature-pad
+      [options]="signaturePadOptions"
+      (onBeginEvent)="drawStart()"
+      (onEndEvent)="drawComplete()">
+    </signature-pad>
+  </div>
+  <div class="buttons">
+    <button md-raised-button class="accent" (click)="clear()">Clear</button>
+    <button md-raised-button class="accent" (click)="cancel()">Cancel</button>
+    <button md-raised-button class="accent" (click)="onSubmit()">Ok</button>
+  </div>
+</div>
+

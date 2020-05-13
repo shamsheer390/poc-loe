@@ -1,0 +1,25 @@
+  <div *ngIf="value !== 100 && value !== 0; else iconVisible">
+    <div [ngStyle]="getAll()" (click)="onClick()" >
+      {{value}}
+    </div>
+  </div>
+  <ng-template #iconVisible>
+
+    <div *ngIf="danger === 1; else iconSuccess" class="percentage-center" [ngStyle]="getPadding()">
+      <i class="material-icon" [ngStyle]="getSize()" (click)="onClick()" >close</i>
+    </div>
+
+    <ng-template #iconSuccess>
+      <div class="percentage-center" [ngStyle]="getPadding()">
+        <i class="material-icon" [ngStyle]="getSize()" (click)="onClick()" >done</i>
+      </div>
+    </ng-template>
+
+  </ng-template>
+
+  <md-progress-spinner
+    [color]="color"
+    [mode]="mode"
+    [value]="value"
+    (click)="onClick()">
+  </md-progress-spinner>

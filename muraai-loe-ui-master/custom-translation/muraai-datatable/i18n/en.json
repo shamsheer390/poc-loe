@@ -1,0 +1,11 @@
+{
+    "MURAAI_DATA_TABLE":{
+        "BUTTON_LABEL":{
+            "DELETE":"Delete",
+            "ADD":"Add",
+            "UPDATEALL":"Update All",
+            "SAVE":"Save added Row"
+        }
+
+    }
+}

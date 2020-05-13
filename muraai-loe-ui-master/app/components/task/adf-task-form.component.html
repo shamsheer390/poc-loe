@@ -1,0 +1,14 @@
+<div [ngClass]="taskRespectedClass">
+        <div class="menu-extended">
+                <i class="material-icons md-30" (click)="defaultLayoutMode($event)" md-tooltip="Click to Shrink" style="cursor: pointer" mdTooltipPosition="left" *ngIf="isOverLayMode">keyboard_arrow_left</i>
+                <i class="material-icons md-30" (click)="fullScreenMode($event)" md-tooltip="Click to Expand" style="cursor: pointer" mdTooltipPosition="below" *ngIf="!isOverLayMode">keyboard_arrow_right</i>
+        </div>
+    <loe-ui *ngIf="processDetails" [formData]="processDetails.variables" [processId]="processDetails.id" [signatureToDocument]="signatureToUpdate"></loe-ui>
+    <!-- <invoice-details *ngIf="taskDetails?.id" [taskName]="taskDetails.name" [invDetails]="getPONumberFromTitle(taskDetails.name)" [mode]="'task'" (onDataLoaded)="onDataSuccess($event)"> </invoice-details> -->
+    <!-- <iframe id="pdfV" style =" height: 100%"></iframe> -->
+    <task-approval-button-list *ngIf="taskDetails?.id" [taskDetails]="taskDetails" (signatureToUpdate)="updatedSignFromPopup($event)"></task-approval-button-list>
+</div>
+<div [ngClass]="detailsRespectedClass" class="big-screen">
+    <adf-task-details1 *ngIf="taskDetails?.id"  (onFullScreen)="fullScreenMode($event)" (isCommentTab)="commentTabSelected($event)" [invoiceNumber]="getPONumberFromTitle(taskDetails.name)" [activeTab]="'details_page'" [taskId]="taskDetails.id"></adf-task-details1>
+</div>
+

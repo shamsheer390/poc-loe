@@ -1,0 +1,22 @@
+<div class="alf-menu-container" *ngIf="(showHeader && showMenu)" [ngClass]="getMenuCollapseClass()">
+    <div class="menu-toggle-button" (click)="toggleMenu()">
+        <i class="material-icons">{{getToggleMenuIcon()}}</i>
+    </div>
+    <alfresco-side-menu [expand]="menuExpanded" [appId]="getAppId(selectedAppName)" (onMenuSelection)="onMenuSelection($event)" ></alfresco-side-menu>
+</div>
+
+<md-toolbar color="primary" *ngIf="showHeader" [ngClass]="getHeaderExpandClass()">
+
+    <h1 flex md-truncate class="md-truncate flex"><span class="app-header" (click) = "invoiceSummaary()">LOE Process</span></h1>
+    <span class="app-spacer"></span>
+    <span>
+        <apps-dashboard-user-profile [firstName] = "userFirstName" [lastName]= "userLastName" [imgSrc] = "(profilePicUrl)?profilePicUrl:''" (onMenuClick)="onUserMenuSelect($event)"> </apps-dashboard-user-profile>
+    </span>
+</md-toolbar>
+
+<div class="alf-router-container" [ngClass]="getMainContainerExpandClass()">
+     <apps-dashboard-breadcrumbs *ngIf="showHeader" [crumbs]="crumbs" (onScrumbSelection)="onChangeBreadsCrumb($event)" (onRefresh)="onClickToRefresh($event)"></apps-dashboard-breadcrumbs>
+    <main class="mdl-layout__content page-content">
+            <router-outlet (activate)="onRefreshCrum($event)"></router-outlet>
+    </main>
+</div>

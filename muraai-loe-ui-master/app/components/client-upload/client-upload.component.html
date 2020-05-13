@@ -1,0 +1,30 @@
+<md-card>
+  <div class="task-container">
+    <h5 class="task-header">Upload Form</h5>
+    <alfresco-upload-drag-area [rootFolderId]="currentFolderPath" (onSuccess)="onUploadSuccess($event)">
+      <div class="upload-wrapper">
+        <div class="upload-message">
+          <i class="material-icons md-36">file_upload</i>
+          <p>DRAG HERE</p>
+        </div>
+      </div>
+    </alfresco-upload-drag-area>
+    <div class="alf-button-wrapper">
+      <alfresco-upload-button [showNotificationBar]="false" [uploadFolders]="false" [multipleFiles]="true" [acceptedFilesType]="'.jpg,.gif,.png,.svg,.pdf'" [rootFolderId]="currentFolderPath" [versioning]="false" (onSuccess)="onUploadSuccess($event)" md-tooltip="Click to Upload">
+      </alfresco-upload-button>
+    </div>
+    <file-uploading-dialog></file-uploading-dialog>
+    <br />
+  </div>
+</md-card>
+
+<dialog class="mdl-dialog mdl-cell--4-col alf-alert-box"  #confirmbox>
+	<div class="alf-alert-message-header">Notification</div>
+	<div class='alf-alert-message-text'>
+		Your Invoice uploaded Successfully. Do you want to upload more invoices?
+	</div>
+	<div class="alf-association-action-container alf-center-align">
+		<button class='alf-tbl-button mdl-shadow--2dp' (click)="onYesClick()">Yes</button>
+    <button class='alf-tbl-button mdl-shadow--2dp' (click)="onNoClick()">No</button>
+	</div>
+</dialog>

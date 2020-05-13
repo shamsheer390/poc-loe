@@ -1,0 +1,12 @@
+<adf-start-process [appId]="appId" (start)="onStart($event)">
+</adf-start-process>
+
+<dialog class="mdl-dialog mdl-cell--4-col alf-alert-box" #alertbox>
+  <div class="alf-alert-message-header">Notification</div>
+  <div class='alf-alert-message-text'>
+    New LOE entry has been created successfully.
+  </div>
+  <div class="alf-association-action-container alf-center-align">
+    <button class='alf-tbl-button mdl-shadow--2dp' (click)="onOKClick()">OK</button>
+  </div>
+</dialog>

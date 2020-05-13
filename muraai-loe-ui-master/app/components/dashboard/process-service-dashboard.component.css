@@ -1,0 +1,86 @@
+.report-header {
+    background: whitesmoke;
+}
+
+.report-header>div {
+    float: left;
+    width: calc(100% - 86px);
+    font-family: Muli;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0.54;
+    padding: 15px 20px;
+}
+
+.report-header>md-icon {
+    font-size: 34px;
+    padding: 6px;
+    cursor: pointer;
+    opacity: 0.54;
+}
+
+.report-container {
+    height: 300px;
+    background: #fff;
+}
+
+.view-div-button {
+    opacity: 0.54;
+    font-family: Muli;
+    font-size: 16px;
+    float: right;
+    padding: 1px 16px;
+    cursor: pointer;
+}
+
+.view-div-button:hover {
+    color: #ff9100;
+}
+
+.report-content {
+    float: left;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow: auto;
+    padding: 16px 0px;
+    overflow-x: hidden;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 840px){
+    activiti-analytics-generator>>>.col-md-6>div {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+.main-container {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    top: 8px;
+}
+
+.report-board {
+    margin: 10px;
+    width: calc(50% - 20px);
+    float: left;
+}
+
+adf-toolbar >>> .mat-toolbar {
+    padding: 0px !important;
+    background: #fbfbfb !important;
+}
+
+adf-toolbar >>> .mat-toolbar .mat-toolbar-row {
+    border-bottom: 1px solid #eeeeee !important;
+}
+
+activiti-analytics-generator >>> .report-icons {
+    display: none;
+}
+
+activiti-analytics-generator >>> h4 {
+    display: none;
+}

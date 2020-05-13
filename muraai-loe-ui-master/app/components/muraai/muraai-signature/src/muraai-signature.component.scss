@@ -1,0 +1,27 @@
+@import '../../../../../styles/theming';
+
+.signature {
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  padding: 5px;
+}
+
+.signature-box {
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  background-color: white;
+}
+
+.buttons {
+  float: right;
+  padding-top: 5px;
+}
+
+.accent {
+  background-color: mat-color($accent);
+  color: white;
+}
+
+.primary {
+  background-color: mat-color($primary);
+  color: white;
+}

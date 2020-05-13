@@ -1,0 +1,29 @@
+@import "../../../../../styles/theming";
+
+md-progress-spinner  {
+  height: 100%;
+  width: 100%;
+}
+.percentage-center{
+  position: absolute;
+}
+
+.material-icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+

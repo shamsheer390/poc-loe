@@ -1,0 +1,99 @@
+<md-card>
+  <h5>{{'LABELS.CONTRACT_DETAILS'  | translate}}</h5>
+    <i class="material-icons" md-icon-button [mdMenuTriggerFor]="menu"  md-tooltip="{{'LABELS.TOOL_TIP'  | translate}}" mdTooltipPosition="below">language</i>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item (click)="changeToEnglish()">
+        <span>English</span>
+      </button>
+      <button md-menu-item (click)="changeToFrench()">
+        <span>French</span>
+      </button>
+    </md-menu>
+  <form #contractForm="ngForm" *ngIf="contractEntryForm">
+    <table class="example-full-width">
+      <tr>
+        <td>
+          <md-input-container class="example-full-width">
+            <input mdInput type="text" placeholder="{{'LABELS.FIRST_NAME'  | translate}}" id="firstName" name="firstName" minlength="2" required
+                   ngModel>
+          </md-input-container>
+        </td>
+        <td>
+          <md-input-container class="example-full-width">
+            <input mdInput type="text" placeholder="{{'LABELS.LAST_NAME'  | translate}}" required id="lastName" name="lastName" ngModel>
+          </md-input-container>
+        </td>
+        <td>
+          <md-input-container class="example-full-width">
+              <input mdInput type="email" placeholder="{{'LABELS.EMAIL'  | translate}}" required id="email" name="email" ngModel>
+          </md-input-container>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <md-input-container class="example-full-width">
+            <textarea mdInput type="text" placeholder="{{'LABELS.ADDRESS'  | translate}}" id="address" name="address" required ngModel></textarea>
+          </md-input-container>
+        </td>
+        <td>
+          
+
+              <md-select style="width:272px" id="serviceType" placeholder="{{'LABELS.SERVICE_TYPE'  | translate}}"  required name="serviceType" ngModel>
+                  <md-option *ngFor="let service of serviceType" [value]="service">
+                      {{ service }}
+                    </md-option>
+                </md-select>
+
+
+            <!-- <input type="text" mdInput id="serviceType" placeholder="{{'LABELS.SERVICE_TYPE'  | translate}}" [mdAutocomplete]="auto" required
+                   name="serviceType" ngModel>
+                   <md-autocomplete #auto="mdAutocomplete">
+                    <md-option *ngFor="let service of serviceType" [value]="service">
+                      {{ service }}
+                    </md-option>
+                  </md-autocomplete> -->
+          
+
+        </td>
+        <td>
+
+            <md-select style="width:272px" id="industryType" placeholder="{{'LABELS.INDUSTRY_TYPE'  | translate}}"  required name="industryType" ngModel>
+                <md-option *ngFor="let option of industryType" [value]="option">
+                    {{ option }}
+                  </md-option>
+              </md-select>
+
+          <!-- <md-input-container class="example-full-width">
+            <input type="text" mdInput id="industryType" placeholder="{{'LABELS.INDUSTRY_TYPE'  | translate}}" [mdAutocomplete]="auto" required
+                   name="industryType" ngModel>
+                   <md-autocomplete #auto="mdAutocomplete">
+                    <md-option *ngFor="let option of industryType" [value]="option">
+                      {{ option }}
+                    </md-option>
+                  </md-autocomplete>
+          </md-input-container> -->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="button-row">
+            <button [disabled]="!contractForm.form.valid" md-raised-button class="button-color"
+                    (click)="onContractEntry(contractForm.value)">{{'LABELS.CONTRACT_ENTRY'  | translate}}
+            </button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <h6 class="successMessage" *ngIf="!contractEntryForm">New LOE entry has been created successfully.</h6>
+</md-card>
+
+<dialog class="mdl-dialog mdl-cell--4-col alf-alert-box"  #alertbox>
+	<div class="alf-alert-message-header">Notification</div>
+	<div class='alf-alert-message-text'>
+		 New LOE entry has been created successfully.
+	</div>
+	<div class="alf-association-action-container alf-center-align"> 
+		<button class='alf-tbl-button mdl-shadow--2dp' (click)="onOKClick()">OK</button>
+	</div>
+</dialog>

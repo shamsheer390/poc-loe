@@ -1,0 +1,40 @@
+<div class="alf-task-menu-container">
+
+  <div class="alf-menu-head-container">
+
+    <div class="alf-menu-header" (click)="onMenuClick('data-entry')">
+      <div class="alf-menu-icon">
+        <i class="material-icons" mdTooltip="LOE Data Entry" mdTooltipPosition="right">note_add</i>
+      </div>
+      <div class="alf-menu-text" *ngIf="expand">LOE Data Entry</div>
+    </div>
+
+    <div class="alf-menu-header" (click)="onMenuClick('tasks')">
+      <div class="alf-menu-icon">
+        <i class="material-icons" mdTooltip="Tasks" mdTooltipPosition="right">mail</i>
+      </div>
+      <div class="alf-menu-text" *ngIf="expand">Tasks</div>
+    </div>
+    <div class="alf-menu-header" (click)="onMenuClick('dashboard')">
+      <div class="alf-menu-icon">
+        <i class="material-icons" mdTooltip="Dashboard" mdTooltipPosition="right">assessment</i>
+      </div>
+      <div class="alf-menu-text" *ngIf="expand">Dashboard</div>
+    </div>
+    <!-- <div class="alf-menu-header" (click)="onMenuClick('start-process')">
+      <div class="alf-menu-icon">
+        <i class="material-icons" mdTooltip="Start Process" mdTooltipPosition="right">business_center</i>
+      </div>
+      <div class="alf-menu-text" *ngIf="expand">Start Process</div>
+    </div> -->
+<!-- 
+    <div class="alf-menu-header" (click)="onMenuClick('client-verfication')">
+      <div class="alf-menu-icon">
+        <i class="material-icons">people</i>
+      </div>
+      <div class="alf-menu-text" *ngIf="expand">Client</div>
+    </div> -->
+
+  </div>
+
+</div>

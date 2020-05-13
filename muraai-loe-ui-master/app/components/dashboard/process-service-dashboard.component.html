@@ -1,0 +1,54 @@
+    <div class="main-container">
+        <div class="mdl-shadow--2dp report-board">
+            <div class="report-header">
+                <div>Process steps total time</div>
+                <md-icon id = "id_icon" (click)="toggleProcessDashboard()">{{ getToggleIcon(showProcessDashboard) }}</md-icon>
+            </div>
+            <div [hidden]="!showProcessDashboard" class="report-container">
+                <div class="report-content">
+                    <activiti-analytics-generator data-automation-id="process-report" *ngIf="isProcessReportVisible()" (onSuccess)="onReport1Load()" [reportId]="caseReportId" [reportParamQuery]="processReportParamQuery" #analytics_process_generator1>
+                    </activiti-analytics-generator>
+                </div>
+                <!-- <button md-button class="view-div-button process-button" (click)="viewAllProcess()">VIEW ALL PROCESS</button> -->
+            </div>
+        </div>
+        <div class="mdl-shadow--2dp report-board">
+            <div class="report-header">
+                <div>Activity durations</div>
+                <md-icon id = "id_icon" (click)="toggleProcessDashboard()">{{ getToggleIcon(showProcessDashboard) }}</md-icon>
+            </div>
+            <div [hidden]="!showProcessDashboard" class="report-container">
+                <div class="report-content">
+                    <activiti-analytics-generator data-automation-id="process-report" *ngIf="isProcessReportVisible()" (onSuccess)="onReport2Load()" [reportId]="caseReportId" [reportParamQuery]="processReportParamQuery" #analytics_process_generator2>
+                    </activiti-analytics-generator>
+                </div>
+                <!-- <button md-button class="view-div-button process-button" (click)="viewAllProcess()">VIEW ALL PROCESS</button> -->
+            </div>
+        </div>
+        <div class="mdl-shadow--2dp report-board">
+            <div class="report-header">
+                <div>Process instance count</div>
+                <md-icon id = "id_icon" (click)="toggleProcessDashboard()">{{ getToggleIcon(showProcessDashboard) }}</md-icon>
+            </div>
+            <div [hidden]="!showProcessDashboard" class="report-container">
+                <div class="report-content">
+                    <activiti-analytics-generator data-automation-id="process-report" *ngIf="isProcessReportVisible()" (onSuccess)="onReport3Load()" [reportId]="caseReportId" [reportParamQuery]="processReportParamQuery" #analytics_process_generator3>
+                    </activiti-analytics-generator>
+                </div>
+                <!-- <button md-button class="view-div-button process-button" (click)="viewAllProcess()">VIEW ALL PROCESS</button> -->
+            </div>
+        </div>
+        <div class="mdl-shadow--2dp report-board">
+            <div class="report-header">
+                <div>Slowest process instances</div>
+                <md-icon id = "id_icon" (click)="toggleProcessDashboard()">{{ getToggleIcon(showProcessDashboard) }}</md-icon>
+            </div>
+            <div [hidden]="!showProcessDashboard" class="report-container">
+                <div class="report-content">
+                    <activiti-analytics-generator data-automation-id="process-report" *ngIf="isProcessReportVisible()" (onSuccess)="onReport4Load()" [reportId]="caseReportId" [reportParamQuery]="processReportParamQuery" #analytics_process_generator4>
+                    </activiti-analytics-generator>
+                </div>
+                <!-- <button md-button class="view-div-button process-button" (click)="viewAllProcess()">VIEW ALL PROCESS</button> -->
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,8 @@
+<div class="main-container">
+  <md-tab-group [class.fix]="fix">
+    <md-tab>
+      <ng-template md-tab-label>COMMENTS</ng-template>
+      <adf-process-instance-comments *ngIf="hasTaskDetails()" [readOnly]="readOnlyForm" [processInstanceId]="taskDetails.processInstanceId" #activiticomments></adf-process-instance-comments>
+    </md-tab>
+  </md-tab-group>
+</div>

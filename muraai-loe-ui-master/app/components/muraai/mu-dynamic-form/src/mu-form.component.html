@@ -1,0 +1,21 @@
+<form  [formGroup]="form">
+    <div class= "form-padding">
+        <md-grid-list cols="12" gutterSize="12px" rowheight="12:1" md-row-height="fit">
+            <div *ngFor="let data of formData; let i=index">
+                <md-grid-tile [colspan]="data.width" [ngClass]="{'md-grid-tile-fix': i > (12/data.width-1) }" *ngIf="data.visibility">
+                    <mu-field [data]="data" [form]="form" (onChange)="onDataChange($event)"></mu-field>
+                </md-grid-tile>
+            </div>
+        </md-grid-list>
+    </div>
+        <div *ngFor="let data of formData" class="button-container pull-right">            
+            <div *ngIf="data.controlType == 'button'" class="width-100">
+                <div *ngIf="data.type == 'submit'">
+                    <button md-raised-button type="data.type" (click)="handleSubmit($event)" [disabled]="!form.valid">{{data.name}}</button>
+                </div>
+                <div *ngIf="data.type != 'submit'">
+                    <button md-raised-button type="data.type" (click)="onButtonClick($event)">{{data.name}}</button>
+                </div>
+            </div>
+        </div>
+</form>

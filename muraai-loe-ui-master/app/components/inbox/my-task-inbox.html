@@ -1,0 +1,6 @@
+<md-card>
+  <div class="task-container">
+    <activiti-tasklist *ngIf="taskFilter?.hasFilter()" [appId]="taskFilter.appId" [processDefinitionKey]="taskFilter.filter.processDefinitionKey" [name]="taskFilter.filter.name" [assignment]="taskFilter.filter.assignment" [state]="taskFilter.filter.state"
+      [sort]="taskFilter.filter.sort" [data]="dataTasks" [landingTaskId]="currentTaskId" (rowClick)="onTaskRowClick($event)" (onSuccess)="onSuccessTaskList($event)" #activititasklist></activiti-tasklist>
+  </div>
+</md-card>

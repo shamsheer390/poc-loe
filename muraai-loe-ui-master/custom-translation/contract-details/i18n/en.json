@@ -1,0 +1,14 @@
+{
+  "TITLE": "Welcome",
+  "LABELS": {
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "EMAIL": "E mail",
+    "ADDRESS": "Address",
+    "SERVICE_TYPE": "Service type",
+    "INDUSTRY_TYPE": "Industry type",
+    "CONTRACT_ENTRY": "Opportunity Entry",
+    "CONTRACT_DETAILS":"Opportunity Details",
+    "TOOL_TIP": "Change Language"
+  }
+}
