@@ -49,7 +49,7 @@
     "alfresco-js-api": "git://github.com/Alfresco/alfresco-js-api.git#b61ce4eb17fa24ca248ad00038b78b26d814f943",
     "angular2-mdl": "2.13.2",
     "angular2-signaturepad": "2.6.1",
-    "chart.js": "2.5.0",
+    "chart.js": "2.9.4",
     "core-js": "2.4.1",
     "dialog-polyfill": "0.4.7",
     "element.scrollintoviewifneeded-polyfill": "1.0.1",
